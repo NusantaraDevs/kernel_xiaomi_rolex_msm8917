@@ -2120,7 +2120,7 @@ void __dl_clear_params(struct task_struct *p)
  * Perform scheduler related setup for a newly forked process p.
  * p is forked by current.
  *
- * __sched_fork() is basic setup used by init_idle() too:
+ * __sched_fork() is basic setup used by init_idle() too: // definition here
  */
 static void __sched_fork(unsigned long clone_flags, struct task_struct *p)
 {
@@ -2148,7 +2148,7 @@ static void __sched_fork(unsigned long clone_flags, struct task_struct *p)
 #endif
 
 #ifdef CONFIG_CPU_FREQ_STAT
-	cpufreq_task_stats_init(p);
+// declaration here cpufreq_task_stats_init(p);
 #endif
 
 	RB_CLEAR_NODE(&p->dl.rb_node);
